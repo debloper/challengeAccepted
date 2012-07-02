@@ -20,7 +20,7 @@
 body {
 	width:				100%;
 	margin:				0;
-	padding:			0;
+	padding:			5% 20%;
 	min-width:			320px;
 	font-family:		Verdana, Georgia, Helvetica,	/* Desktop	*/
 						"Droid Sans", "Helvetica Neue",	/* Mobile	*/
@@ -35,3 +35,7 @@ a {
 	outline:			0;
 	text-decoration:	none;
 }
+
+/* 1. Imports */
+
+/* 2. Elements */
