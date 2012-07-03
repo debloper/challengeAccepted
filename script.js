@@ -20,9 +20,7 @@ var accordion = {};
 		for (var i in headers) {
 			headers[i].className = "collapsed";
 		} // Let's set all contents to collapsed, better trade-off than if{}
-		event.target.parentNode.className = "expanded";
-		// event.target == the anchor tag, so the parent is the h3
-		event.preventDefault();
+		event.target.className = "expanded";
 	}
 
 	for (var j in headers) {

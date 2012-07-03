@@ -69,6 +69,7 @@ body {
 
 /* 3. ID & Class */
 #accordion > h3 {
+	color:				#357;
 	cursor:				pointer;
 	margin-bottom:		0;
 	padding:			0.5rem 1rem;
@@ -77,6 +78,7 @@ body {
 	background:			-ms-linear-gradient(top, #eee, #ace);
 	background:			-o-linear-gradient(top, #eee, #ace);
 	background:			linear-gradient(top, #eee, #ace);
+	text-shadow:		0 0 1px #369;
 }
 #accordion > div {
 	padding:			0 1rem;
