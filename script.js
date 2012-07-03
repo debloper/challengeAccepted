@@ -6,6 +6,8 @@ var accordion = {};
 	var el = document.getElementById("accordion")
 	,	headers = el.querySelectorAll("h3");
 
+	accordion.target = headers[0];	// Default value for targer header
+
 	accordion.init = function(order) {
 		for (var i in headers) {
 			if (!order) order = 0;
@@ -21,10 +23,11 @@ var accordion = {};
 			headers[i].className = "collapsed";
 		} // Let's set all contents to collapsed, better trade-off than if{}
 		event.target.className = "expanded";
+		accordion.target = event.target;
 		accordion.fetch();
 	}
 	accordion.callback = function(data) {
-		alert(data);
+		accordion.target.innerHTML = data;
 	}
 	accordion.fetch = function() {
 		var jsonp = document.createElement('script');
