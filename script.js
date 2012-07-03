@@ -18,16 +18,24 @@ var accordion = {};
 			headers[i].className = "collapsed";
 		}
 	}
+	accordion.content = function(target) {
+		var content = target.nextSibling;
+		if (!content.style) { // Let's make it recursive, if whitespace node
+			content = accordion.content(content);
+		} // to tacle https://developer.mozilla.org/en/Whitespace_in_the_DOM
+		accordion.target = content
+		return accordion.target;
+	}
 	accordion.setup = function(event) {
 		for (var i in headers) {
 			headers[i].className = "collapsed";
 		} // Let's set all contents to collapsed, better trade-off than if{}
 		event.target.className = "expanded";
-		accordion.target = event.target;
+		accordion.target = accordion.content(event.target);
 		accordion.fetch();
 	}
 	accordion.callback = function(data) {
-		accordion.target.innerHTML = data;
+		accordion.target.innerHTML = "<p>" + data + "</p>";
 	}
 	accordion.fetch = function() {
 		var jsonp = document.createElement('script');
