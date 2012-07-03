@@ -68,11 +68,38 @@ body {
 }
 
 /* 3. ID & Class */
+#accordion > h3 {
+	cursor:				pointer;
+	margin-bottom:		0;
+	padding:			0.5rem 1rem;
+	background:			-webkit-linear-gradient(top, #eee, #ace);
+	background:			-moz-linear-gradient(top, #eee, #ace);
+	background:			-ms-linear-gradient(top, #eee, #ace);
+	background:			-o-linear-gradient(top, #eee, #ace);
+	background:			linear-gradient(top, #eee, #ace);
+}
+#accordion > div {
+	padding:			0 1rem;
+	background:			#ace;
+}
+#accordion > div > p { margin-top: 0; }
+.expanded {
+	border:				1px solid #eee;
+	border-bottom:		none;
+	border-radius:		4px 4px 0 0;
+}
 .expanded + div {
 	height:				auto;
+	border:				1px solid #eee;
+	border-top:			none;
+	border-radius:		0 0 4px 4px;
 }
 .expanded + div > * {
 	visibility:			visible;
+}
+.collapsed {
+	border:				1px solid #eee;
+	border-radius:		4px;
 }
 .collapsed + div {
 	height:				0;
