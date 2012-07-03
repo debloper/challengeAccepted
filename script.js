@@ -4,32 +4,24 @@ var accordion = {};
 
 (function() {
 	var el = document.getElementById("accordion")
-	,	headers = el.querySelectorAll("h3")
-	,	contents = el.querySelectorAll("h3 + div");
+	,	headers = el.querySelectorAll("h3");
 
-	accordion.setAccordion = function(order) {
-		for (var i in contents) {
+	accordion.init = function(order) {
+		for (var i in headers) {
+			if (!order) order = 0;
 			if (i == order) {
-				contents[i].className = "expanded";
+				headers[i].className = "expanded";
 				continue;
 			}
-			contents[i].className = "collapsed";
+			headers[i].className = "collapsed";
 		}
 	}
-	accordion.getContent = function(header) {
-		var content = header.nextSibling;
-		if (!content.style) { // Let's make it recursive, if whitespace node
-			content = accordion.getContent(content);
-		} // to tacle https://developer.mozilla.org/en/Whitespace_in_the_DOM
-		return content;
-	}
 	accordion.handleAction =  function(event) {
-		for (var i in contents) {
-			contents[i].className = "collapsed";
+		for (var i in headers) {
+			headers[i].className = "collapsed";
 		} // Let's set all contents to collapsed, better trade-off than if{}
-		var content = accordion.getContent(event.target.parentNode);
+		event.target.parentNode.className = "expanded";
 		// event.target == the anchor tag, so the parent is the h3
-		content.className = "expanded";
 		event.preventDefault();
 	}
 
