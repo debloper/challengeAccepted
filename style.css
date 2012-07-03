@@ -39,3 +39,21 @@ a {
 /* 1. Imports */
 
 /* 2. Elements */
+
+/* 3. ID & Class */
+.expanded {
+	height:				auto;
+}
+.expanded > * {
+	visibility:			visible;
+}
+.collapsed {
+	height:				0;
+}
+.collapsed > * {
+	visibility:			hidden;
+}
+
+/* 4. Pseudoclass */
+
+/* 5. Media Queries */
