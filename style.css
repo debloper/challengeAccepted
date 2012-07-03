@@ -20,7 +20,7 @@
 body {
 	width:				100%;
 	margin:				0;
-	padding:			5% 20%;
+	padding:			0;
 	min-width:			320px;
 	font-family:		Verdana, Georgia, Helvetica,	/* Desktop	*/
 						"Droid Sans", "Helvetica Neue",	/* Mobile	*/
@@ -39,6 +39,33 @@ a {
 /* 1. Imports */
 
 /* 2. Elements */
+body {
+	color:				#333;
+	padding:			5% 20%;
+	background-color:	#258;
+	background-image:	-webkit-linear-gradient(rgba(255,255,255,.5) 1px, transparent 1px),
+						-webkit-linear-gradient(0, rgba(255,255,255,.5) 1px, transparent 1px),
+						-webkit-linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px),
+						-webkit-linear-gradient(0, rgba(255,255,255,.1) 1px, transparent 1px);
+	background-image:	-moz-linear-gradient(rgba(255,255,255,.5) 1px, transparent 1px),
+						-moz-linear-gradient(0, rgba(255,255,255,.5) 1px, transparent 1px),
+						-moz-linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px),
+						-moz-linear-gradient(0, rgba(255,255,255,.1) 1px, transparent 1px);
+	background-image:	-ms-linear-gradient(rgba(255,255,255,.5) 1px, transparent 1px),
+						-ms-linear-gradient(0, rgba(255,255,255,.5) 1px, transparent 1px),
+						-ms-linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px),
+						-ms-linear-gradient(0, rgba(255,255,255,.1) 1px, transparent 1px);
+	background-image:	-o-linear-gradient(rgba(255,255,255,.5) 1px, transparent 1px),
+						-o-linear-gradient(0, rgba(255,255,255,.5) 1px, transparent 1px),
+						-o-linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px),
+						-o-linear-gradient(0, rgba(255,255,255,.1) 1px, transparent 1px);
+	background-image:	linear-gradient(rgba(255,255,255,.5) 1px, transparent 1px),
+						linear-gradient(0, rgba(255,255,255,.5) 1px, transparent 1px),
+						linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px),
+						linear-gradient(0, rgba(255,255,255,.1) 1px, transparent 1px);
+	background-size:	100px 100px, 100px 100px, 20px 20px, 20px 20px;
+	background-position:-1px -1px, -1px -1px, -1px -1px, -1px -1px;
+}
 
 /* 3. ID & Class */
 .expanded + div {
